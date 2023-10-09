@@ -12,3 +12,8 @@ export {
 export {
     getTimetable
 } from "./timetable_api.js"
+
+export {
+    ors_api_key,
+    getClosestStops
+} from "./gis.js"

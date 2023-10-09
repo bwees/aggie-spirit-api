@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/bwees/aggie-spirit-api#readme",
   "dependencies": {
-    "eventsource": "^2.0.2",
     "dom-parser": "^0.1.6",
-    "moment": "^2.29.4"
+    "eventsource": "^2.0.2",
+    "moment": "^2.29.4",
+    "openrouteservice-js": "^0.3.2"
   }
 }
