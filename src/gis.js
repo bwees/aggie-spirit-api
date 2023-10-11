@@ -2,16 +2,6 @@ import Openrouteservice from 'openrouteservice-js'
 import { RouteGroup, getRoutesByGroup } from './map_api.js';
 
 
-export var ors_api_key = ""
-/**
- * Wrapper function to retreive the Openrouteservice API object since the API key is not passed to each function
- * @returns {Openrouteservice.Directions} Openrouteservice API object
- */
-function getORSAPI() {
-    if (ors_api_key == "") throw new Error("Openrouteservice API key not set")
-    return new Openrouteservice.Directions({ api_key: ors_api_key});
-}
-
 /**
  * Compute the distance between two GPS points in meters
  * @param {Number} lat1 latitude of first point
@@ -20,7 +10,7 @@ function getORSAPI() {
  * @param {Number} lon2 longitude of second point
  * @returns {Number} distance in meters
  */
-function metersBetweenGPSPoints(lat1, lon1, lat2, lon2) {
+export function metersBetweenGPSPoints(lat1, lon1, lat2, lon2) {
     function degreesToRadians(degrees)
     {
         var pi = Math.PI;
@@ -67,7 +57,8 @@ function flattenRoutes(routes) {
  * @param {Object | Array} routes the routes to search for stops on, defaults to all routes
  * @returns {Array}
  */
-export async function getClosestStops(lat, lon, routes=await getRoutesByGroup(RouteGroup.ALL), limit=10) {
+export async function getClosestStops(lat, lon, routes, limit=10) {
+    routes = routes || await getRoutesByGroup(RouteGroup.ALL)
     routes = flattenRoutes(routes)
 
     var distances = []

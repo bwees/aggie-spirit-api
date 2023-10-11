@@ -1,6 +1,7 @@
 import { getClosestStops } from '../src/gis.js';
-import { getRouteByName, getRoutesByGroup, RouteGroup } from '../src/index.js';
+import { getRouteByName, getRoutesByGroup, getRouteStopPredictions, RouteGroup, setORSAPIKey } from '../src/index.js';
 
-getClosestStops(30.642298,-96.467580).then((stops) => {
-    console.log(stops)
+setORSAPIKey("5b3ce3597851110001cf62484ad38325dafe4d63baba938c586a2440")
+
+getRouteStopPredictions("47").then((predictions) => {
 })

@@ -14,6 +14,10 @@ export {
 } from "./timetable_api.js"
 
 export {
-    ors_api_key,
     getClosestStops
 } from "./gis.js"
+
+export {
+    getRouteStopPredictions,
+    setORSAPIKey
+} from "./prediction.js"
