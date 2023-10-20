@@ -3,5 +3,5 @@ import { getRouteByName, getRoutesByGroup, getRouteStopPredictions, RouteGroup, 
 
 setORSAPIKey(process.env["ORS_API_KEY"])
 
-getRouteStopPredictions("47").then((predictions) => {
+getRouteStopPredictions("01-04").then((predictions) => {
 })
