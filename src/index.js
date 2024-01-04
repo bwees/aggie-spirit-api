@@ -1,17 +1,18 @@
-export { MapConnection, TimetableConnection } from "./connection.js"
-
-export { 
-    getRouteBuses, 
-    getRouteByKey,
-    getRouteByName,
-    getRoutesByGroup,
-    RouteGroup    
-} from "./map_api.js"
+export {
+    getAuthentication
+} from "./connection.js"
 
 export {
-    getTimetable
-} from "./timetable_api.js"
+    getBaseData,
+    getPatternPaths,
+    getVehicles,
+    getNextDepartureTimes
+} from "./map.js"
 
 export {
-    getAlerts
-} from "./alert_api.js"
+    getActiveRoutes,
+    getNearbyRoutes,
+    getNextStopTimes,
+    getStopSchedules,
+    getStopEstimates
+} from "./home.js"

@@ -4,12 +4,13 @@
   "description": "JS implementation of the Texas A&M Bus API",
   "main": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "types"
   ],
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "example": "node --openssl-config=openssl.cnf examples/example.js"
+    "example": "node examples/example.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,7 @@
   },
   "homepage": "https://github.com/bwees/aggie-spirit-api#readme",
   "dependencies": {
-    "eventsource": "^2.0.2",
-    "dom-parser": "^0.1.6",
     "moment": "^2.29.4"
-  }
+  },
+  "types": "types/index.d.ts"
 }
